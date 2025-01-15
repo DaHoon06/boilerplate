@@ -1,0 +1,11 @@
+.workspaceContainer {
+  width: 100%;
+  height: 100%;
+
+  .workspaceMain {
+    width: 100%;
+    // footer: 100px, header: 67px
+    min-height: calc(100vh - 167px);
+    padding: 1em 2em;
+  }
+}

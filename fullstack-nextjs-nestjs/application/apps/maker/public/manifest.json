@@ -1,0 +1,11 @@
+{
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "프로젝트 Q",
+  "short_name": "project Q",
+  "description": "project Q dahoon06",
+  "icons": []
+}

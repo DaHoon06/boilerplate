@@ -1,0 +1,28 @@
+{
+  "name": "@datasketch/core",
+  "version": "0.0.1",
+  "private": true,
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./helper": "./src/helper/index.ts",
+    "./hooks": "./src/hooks/index.ts",
+    "./typings": "./src/typings/index.ts",
+    "./lib": "./src/lib/index.ts"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-cookie": "^7.1.4"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.56.5",
+    "@types/node": "^20.11.24",
+    "@types/react": "^19",
+    "@datasketch/eslint-config": "*",
+    "@datasketch/ts-config": "*",
+    "eslint": "^9",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0"
+  }
+}
