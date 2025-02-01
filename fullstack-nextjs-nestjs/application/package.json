@@ -1,0 +1,36 @@
+{
+  "name": "application",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "build:production:maker": "dotenv -e .env.production -- turbo build --filter maker",
+    "build:production:router": "dotenv -e .env.production -- turbo build --filter router",
+    "build:staging:maker": "dotenv -e .env.staging -- turbo build --filter maker",
+    "build:staging:router": "dotenv -e .env.staging -- turbo build --filter router",
+    "dev": "turbo dev",
+    "dev:maker": "dotenv -e .env -- turbo dev --filter maker",
+    "dev:router": "dotenv -e .env -- turbo dev --filter router",
+    "staging:maker": "dotenv -e .env.staging -- turbo staging:maker --filter maker",
+    "staging:router": "dotenv -e .env.staging -- turbo staging:router --filter router",
+    "prod:maker": "dotenv -e .env.production -- turbo prod:maker --filter maker",
+    "prod:router": "turbo run prod:router --filter router",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@9.8.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "dotenv-cli": "^7.4.2",
+    "turbo": "^2.0.6"
+  }
+}

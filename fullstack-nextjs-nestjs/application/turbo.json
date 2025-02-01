@@ -1,0 +1,74 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local", ".env"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "build:staging:maker": {
+      "dependsOn": [],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "build:staging:router": {
+      "dependsOn": [],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "build:production:maker": {
+      "dependsOn": [],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "build:production:router": {
+      "dependsOn": [],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "dev:config": {
+      "cache": false,
+      "persistent": true,
+      "env": [".env.development"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "env": [".env.development"]
+    },
+    "dev:maker": {
+      "cache": false,
+      "persistent": true,
+      "env": [".env"]
+    },
+    "dev:router": {
+      "cache": false,
+      "persistent": true,
+      "env": [".env"]
+    },
+    "staging:maker": {
+      "cache": false,
+      "persistent": true,
+      "env": [".env.staging"]
+    },
+    "staging:router": {
+      "cache": false,
+      "persistent": true,
+      "env": [".env.staging"]
+    },
+    "prod:maker": {
+      "cache": true,
+      "persistent": true,
+      "env": [".env.production"]
+    },
+    "prod:router": {
+      "cache": true,
+      "persistent": true,
+      "env": [".env.production"]
+    }
+  }
+}
