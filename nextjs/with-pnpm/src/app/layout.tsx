@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import React from "react";
+import "@/styles/globals.css";
+import "@/styles/reset.css";
 import { AppProvider, ThemeScript } from "./(app)";
 import { Toaster } from "@/shared/ui/toast";
 
