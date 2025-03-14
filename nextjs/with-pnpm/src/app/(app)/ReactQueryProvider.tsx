@@ -7,7 +7,7 @@ import {
   QueryClientProvider,
 } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { queryClient } from "@/shared/libs/tanstack/queryClient";
+import { queryClient } from "@/shared/lib/tanstack/queryClient";
 
 export default function ReactQueryProvider({
   children,
