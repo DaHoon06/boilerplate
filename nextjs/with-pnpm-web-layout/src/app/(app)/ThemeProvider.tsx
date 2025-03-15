@@ -13,7 +13,7 @@ const ThemeProvider = ({ children }: ThemeProviderProps): ReactElement => {
   }, []);
 
   if (!mounted) {
-    return <>{children}</>; // 클라이언트에서만 렌더링
+    return <>{children}</>;
   }
 
   return <NextThemesProvider attribute="class">{children}</NextThemesProvider>;

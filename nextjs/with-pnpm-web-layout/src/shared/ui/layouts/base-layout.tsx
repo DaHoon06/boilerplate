@@ -6,7 +6,7 @@ type BaseLayoutProps = {
 
 export const BaseLayout = ({ children }: BaseLayoutProps): ReactElement => {
   return (
-    <div className="flex pt-12 h-[calc(100vh-4rem)] overflow-auto w-full">
+    <div className="flex pt-14 h-[calc(100vh-4rem)] overflow-auto w-full">
       {children}
     </div>
   );

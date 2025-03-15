@@ -3,8 +3,9 @@ import React from "react";
 import "@/styles/globals.css";
 import { AppProvider } from "./(app)";
 import { Toaster } from "@/shared/ui/toast";
-import { BaseLayout, Footer, Header } from "@/shared/ui/layouts";
+import { BaseLayout } from "@/shared/ui/layouts";
 import ThemeScript from "./(app)/ThemeScript";
+import { Header, Footer } from "@/widgets";
 
 export const metadata: Metadata = {
   title: "샘플",
