@@ -12,6 +12,7 @@ import ReactDOM from "react-dom";
 import useModalStore, { ModalType } from "@/shared/store/modalStore";
 import { FadeModal } from "./fade-modal";
 import useModal from "@/shared/hooks/useModal";
+import styles from "./modal.module.css";
 
 type Modal = PropsWithChildren;
 
@@ -22,7 +23,6 @@ export type ModalProps = {
 
 interface ModalHandlerProps extends PropsWithChildren {
   outerClick?: boolean;
-  modalType: ModalType;
 }
 
 export const ModalHandler: React.FC<ModalHandlerProps> = (props) => {
@@ -53,15 +53,12 @@ export const ModalHandler: React.FC<ModalHandlerProps> = (props) => {
   const modalHandler = (children: ReactNode): ReactElement => {
     return (
       <>
-        {/* <div
-          className={styles.modalBackGroundLayer}
-          onClick={outerClickEvent}
-          style={{
-            opacity: isOpen ? "1" : "0",
-            visibility: isOpen ? "visible" : "hidden",
-          }}
-        /> */}
-        <FadeModal ele={ele} isOpen={isOpen} onCloseModal={onRequestClose}>
+        <FadeModal
+          ele={ele}
+          isOpen={isOpen}
+          onCloseModal={onRequestClose}
+          outClickEvent={outerClickEvent}
+        >
           {children}
         </FadeModal>
       </>

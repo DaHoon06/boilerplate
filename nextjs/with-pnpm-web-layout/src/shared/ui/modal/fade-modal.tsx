@@ -42,7 +42,7 @@ export const FadeModal = (props: FadeModalProps): ReactElement => {
                   </button>
                 </motion.header>
               )}
-              <motion.div ref={ele} className={styles["modal-content-box"]}>
+              <motion.div className={styles["modal-content-box"]}>
                 {children}
               </motion.div>
             </motion.div>

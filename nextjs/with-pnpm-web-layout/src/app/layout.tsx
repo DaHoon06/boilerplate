@@ -42,6 +42,7 @@ export default function RootLayout({
           <Footer />
         </AppProvider>
         <Toaster position="top-right" />
+        <div id="modal" />
       </body>
     </html>
   );

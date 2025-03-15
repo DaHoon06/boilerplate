@@ -2,10 +2,8 @@
   "root": true,
   "rules": {
     "@typescript-eslint/no-explicit-any": "off", // typescript any Type 허용
-    "import/prefer-default-export": 0, // export , export default 둘 다 허용하도록
     "no-console": "warn", // console 함수 사용시 경고
-    "no-unused-vars": "off", // 타입 스크립트에서 임시 변수 설정시 오류 반환 -> 허용
-    "indent": ["error", 4, { "SwitchCase": 1 }] // Tab 줄 바꿈 포인트 4칸 한번씩 (SwitchCase)
+    "no-unused-vars": "off" // 타입 스크립트에서 임시 변수 설정시 오류 반환 -> 허용
   },
   "extends": ["next/core-web-vitals", "next/typescript"]
 }
